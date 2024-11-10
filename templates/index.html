@@ -13,24 +13,28 @@
       flex-direction: column;
       align-items: center;
       background-color: #f9f9f9;
+      scroll-behavior: smooth;
     }
 
-    /* Panel style */
+    /* Panel style - fixed to the top */
     .panel {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      max-width: 60%;
       display: flex;
       justify-content: space-around;
-      width: 60%;
       background-color: #333;
       padding: 10px;
-      margin-top: 20px;
-      border-radius: 8px;
+      border-radius: 0 0 8px 8px;
+      z-index: 1000;
     }
 
     /* Button style */
-    .panel button {
+    .panel a {
       background-color: #007BFF;
       color: white;
-      border: none;
+      text-decoration: none;
       padding: 10px 20px;
       font-size: 16px;
       cursor: pointer;
@@ -38,14 +42,14 @@
       transition: background-color 0.3s;
     }
 
-    .panel button:hover {
+    .panel a:hover {
       background-color: #0056b3;
     }
 
     /* Main content area */
     .content {
       width: 60%;
-      margin-top: 20px;
+      margin-top: 80px; /* Creates space for the fixed panel */
       text-align: center;
     }
 
@@ -60,23 +64,92 @@
       border-radius: 5px;
       margin-top: 10px;
     }
+
+    /* Section styles */
+    .section {
+      width: 60%;
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #f1f1f1;
+      border-radius: 8px;
+    }
+
+    .section h2 {
+      font-size: 24px;
+      color: #333;
+    }
+
+    .section p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin: 15px 0;
+    }
   </style>
 </head>
 <body>
   
   <!-- Button Panel -->
   <div class="panel">
-    <button>Home</button>
-    <button>Get Started</button>
-    <button>Sponors</button>
-    <button>FAQ</button>
+    <a href="#home" class="scroll-link">Home</a>
+    <a href="#get-started" class="scroll-link">Get Started</a>
+    <a href="#sponsors" class="scroll-link">Sponsors</a>
+    <a href="#faq" class="scroll-link">FAQ</a>
   </div>
 
   <!-- Main Content Area -->
-  <div class="content">
+  <div class="content" id="home">
     <p>Welcome to WECE Hacks 25'!</p>
     <img src="image-placeholder.jpg" alt="Placeholder image for the website content" />
   </div>
+
+  <!-- Sections -->
+  <div class="section" id="get-started">
+    <h2>Get Started</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <img src="image-placeholder.jpg" alt="Image for Get Started section" />
+    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>In-depth guide on how to join, participate, and maximize your experience at WECE Hacks. Here's everything you need to get started!</p>
+    <img src="image-placeholder.jpg" alt="Another image for Get Started section" />
+  </div>
+
+  <div class="section" id="sponsors">
+    <h2>Sponsors</h2>
+    <p>Our event is proudly supported by leading companies and organizations. Here’s a glimpse into our top sponsors:</p>
+    <img src="image-placeholder.jpg" alt="Sponsor image 1" />
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+    <img src="image-placeholder.jpg" alt="Sponsor image 2" />
+    <p>Sponsors provide resources and support to make WECE Hacks a success, and we thank each of them for their contributions.</p>
+    <p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor.</p>
+  </div>
+
+  <div class="section" id="faq">
+    <h2>FAQ</h2>
+    <p>Have questions? Here are answers to some common queries about WECE Hacks:</p>
+    <p><strong>Q1:</strong> What is WECE Hacks? <br> <strong>A:</strong> WECE Hacks is an exciting event where students come together to innovate and create solutions.</p>
+    <img src="image-placeholder.jpg" alt="FAQ image" />
+    <p><strong>Q2:</strong> How can I register? <br> <strong>A:</strong> Simply follow the registration link on our homepage and fill out the form.</p>
+    <p><strong>Q3:</strong> Do I need prior experience? <br> <strong>A:</strong> No, WECE Hacks welcomes all skill levels, from beginners to experts!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis felis turpis, ut blandit odio convallis eget.</p>
+  </div>
+
+  <!-- JavaScript for smooth scrolling -->
+  <script>
+    document.querySelectorAll('.scroll-link').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
 
 </body>
 </html>
