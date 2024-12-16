@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">             
   <title>Website Front Page</title>
   <style>
-    @import url('https://fonts.cdnfonts.com/css/arcade-classic');
     body {
       font-family: 'ArcadeClassic', sans-serif;
       margin: 0;
@@ -13,21 +12,20 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      background-image: url('lofiarcade03.jpeg'); /* Replacing background with lofiarcade01 */
+      background-image: url('lofiarcade03.jpeg');
       background-size: cover;
       background-position: center;
-      background-repeat: repeat-y; /* Repeats vertically if the image is not tall enough */
+      background-repeat: repeat-y;
       scroll-behavior: smooth;
     }
 
-    /* Panel style - fixed to the top */
     .panel {
       position: fixed;
       top: 0;
       width: 100%;
       display: flex;
       justify-content: space-around;
-      background-image: url('lofiarcade02.jpeg'); /* Background for the panel */
+      background-image: url('lofiarcade02.jpeg');
       background-size: cover;
       background-position: center;
       padding: 10px;
@@ -35,7 +33,6 @@
       z-index: 1000;
     }
 
-    /* Button style */
     .panel a {
       background-color: #9f5efb;
       color: white;
@@ -51,10 +48,9 @@
       background-color: #0056b3;
     }
 
-    /* Main content area */
     .content {
       width: 60%;
-      margin-top: 80px; /* Creates space for the fixed panel */
+      margin-top: 100px;
       text-align: center;
     }
 
@@ -63,7 +59,7 @@
       color: #333;
     }
     .content h1 {
-      font-size: 80px;
+      font-size: 60px;
       color: #ffffff;
     }
 
@@ -73,16 +69,30 @@
       border-radius: 5px;
       margin-top: 10px;
     }
+    .image-container {
+  display: flex;
+  justify-content: center;  /* Horizontally centers the image */
+  align-items: center;      /* Vertically centers the image */
+  min-height: 50vh;         /* Adjusts the height to 50% of the viewport */
+  margin-top: 20px;         /* Add some space above the container */
+  margin-bottom: 20px;      /* Add some space below the container */
+}
 
-    /* Section styles */
-  .section {
-    width: 60%;
-    margin-top: 40px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.5); /* White with 80% opacity */
-    border-radius: 8px;
-  }
+.resized-image {
+  width: 50%;   /* Makes the image 50% of its original size */
+  height: auto; /* Keeps the aspect ratio */
+}
 
+    .section {
+      width: 60%;
+      margin-top: 40px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 8px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
 
     .section h2 {
       font-size: 24px;
@@ -96,11 +106,113 @@
     }
 
     .section img {
-      max-width: 100%;
+      flex: 1;
+      max-width: 40%;
       height: auto;
       border-radius: 5px;
-      margin: 15px 0;
     }
+
+    #countdown-timer {
+      margin-top: 20px;
+      color: #ffffff;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    #timer {
+      color: #ffffff;
+      font-size: 40px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .sponsors-section {
+      width: 80%;
+      padding: 30px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      margin-top: 40px; /* Added space between sections */
+    }
+
+    .sponsors-section .sponsor {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 30px;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .sponsors-section .sponsor img {
+      max-width: 30%;
+      border-radius: 5px;
+    }
+
+    .sponsors-section .sponsor p {
+      flex: 1;
+      font-size: 16px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .faq-section {
+      width: 60%;
+      margin-top: 40px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .faq-section h2 {
+      font-size: 30px;
+      color: #333;
+      text-align: center;
+    }
+
+    .faq-section p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    .faq-section .faq-item {
+      margin-bottom: 20px;
+      background-color: #f4f4f4;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .faq-section .faq-item strong {
+      color: #333;
+    }
+
+    .tools-resources-section {
+      width: 80%;
+      padding: 30px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      margin-top: 40px; /* Added space between sections */
+    }
+
+    .tools-resources-section h2 {
+      font-size: 30px;
+      color: #333;
+      text-align: center;
+    }
+
+    .tools-resources-section p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+    }
+
   </style>
 </head>
 <body>
@@ -113,50 +225,115 @@
     <a href="#faq" class="scroll-link">FAQ</a>
     <a href="#tools-resources" class="scroll-link">Tools and Resources</a>
   </div>
-
+  <div class="nav-bar">
+    <button onclick="scrollToSection('home')">Home</button>
+    <button onclick="scrollToSection('about')">About</button>
+    <button onclick="scrollToSection('sponsors')">Sponsors</button>
+    <button onclick="scrollToSection('faq')">FAQs</button>
+    <button onclick="scrollToSection('tools-resources')">Tools & Resources</button>
+  </div>
   <!-- Main Content Area -->
   <div class="content" id="home">
     <h1>WECE  HACKS  2025! </h1>
     <img src="WECELOGO.png" alt="Placeholder image for the website content" />
   </div>
 
+  <div id="countdown-timer">
+    <h2>Join us from February 21st-23rd!</h2>
+  </div>
+
+  <div id="timer">
+    <span id="days">00</span> Days 
+    <span id="hours">00</span> Hours 
+    <span id="minutes">00</span> Minutes 
+    <span id="seconds">00</span> Seconds
+  </div>
+
   <!-- Sections -->
   <div class="section" id="get-started">
-    <h2>Get Started</h2>
-    <p>Welcome to WECE HACKS 2025! </p>
-    <img src="image-placeholder.jpg" alt="Image for Get Started section" />
-    <p> filler text: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>In-depth guide on how to join, participate, and maximize your experience at WECE Hacks. Here's everything you need to get started!</p>
-    <img src="image-placeholder.jpg" alt="Another image for Get Started section" />
+    <img src="arcade_gif.gif" alt="Animated GIF for Get Started section" />
+    <div>
+      <h2>Get Started</h2>
+      <p>Welcome to WECE HACKS 2025!</p>
+      <p>Here is where you will find everything you and your team will need to begin hacking!</p>
+      <p>*See FAQ below for any questions/concerns*</p>
+      <p>
+        Create your team HERE *link coming soon*
+      </p>
+      <p>
+        Start CTF challenges HERE *link coming soon*
+      </p>
+    </div>
   </div>
 
-  <div class="section" id="sponsors">
+  <div class="sponsors-section" id="sponsors">
     <h2>Sponsors</h2>
-    <p>Our event is proudly supported by leading companies and organizations. Here’s a glimpse into our top sponsors:</p>
-    <img src="image-placeholder.jpg" alt="Sponsor image 1" />
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
-    <img src="image-placeholder.jpg" alt="Sponsor image 2" />
-    <p>Sponsors provide resources and support to make WECE Hacks a success, and we thank each of them for their contributions.</p>
-    <p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor.</p>
+    <p>Our event is proudly supported by leading companies and organizations. Here’s a glimpse into our top platinum sponsors:</p>
+    
+    <!-- Sponsor 1 -->
+    <div class="sponsor">
+      <img src="image-placeholder.jpg" alt="Union Pacific" />
+      <p>Union Pacific provides resources and innovation for the future of transportation. Their commitment helps WECE Hacks reach new heights.</p>
+    </div>
+    
+    <!-- Sponsor 2 -->
+    <div class="sponsor">
+      <img src="image-placeholder.jpg" alt="Collins Aerospace" />
+      <p>Collins Aerospace fosters cutting-edge engineering and supports future talent through sponsorship.</p>
+    </div>
+    
+    <!-- Sponsor 3 -->
+    <div class="sponsor">
+      <img src="image-placeholder.jpg" alt="Marvell" />
+      <p>Marvell advances data infrastructure technology to connect the world. They play a vital role in empowering hackathons like ours.</p>
+    </div>
+    
+    <!-- Sponsor 4 -->
+    <div class="sponsor">
+      <img src="image-placeholder.jpg" alt="National Instruments" />
+      <p>National Instruments provides powerful solutions for measurement and automation. Their support enhances WECE Hacks immensely.</p>
+    </div>
   </div>
 
-  <div class="section" id="faq">
-    <h2>FAQ</h2>
-    <p>Have questions? Here are answers to some common queries about WECE Hacks:</p>
-    <p><strong>Q1:</strong> What is WECE Hacks? <br> <strong>A:</strong> WECE Hacks is an exciting event where students come together to innovate and create solutions.</p>
-    <img src="image-placeholder.jpg" alt="FAQ image" />
-    <p><strong>Q2:</strong> How can I register? <br> <strong>A:</strong> Simply follow the registration link on our homepage and fill out the form.</p>
-    <p><strong>Q3:</strong> Do I need prior experience? <br> <strong>A:</strong> No, WECE Hacks welcomes all skill levels, from beginners to experts!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis felis turpis, ut blandit odio convallis eget.</p>
+  <div class="faq-section" id="faq">
+    <div class="image-container">
+    <img src="confused.gif" alt="stuck?" class="resized-image" />
+     </div>
+    <h2>FAQs</h2>
+
+    <!-- FAQ 1 -->
+    <div class="faq-item">
+      <p><strong>Q1:</strong> What is WECE Hacks?</p>
+      <p><strong>A:</strong> WECE Hacks is an annual hackathon organized by the WECE (Women in Electrical and Computer Engineering) club, where students come together to create innovative technology.</p>
+    </div>
+
+    <!-- FAQ 2 -->
+    <div class="faq-item">
+      <p><strong>Q2:</strong> How do I sign up?</p>
+      <p><strong>A:</strong> You can register for WECE Hacks by visiting the registration page on our website. Make sure to create your team and prepare for the event!</p>
+    </div>
+
+    <!-- FAQ 3 -->
+    <div class="faq-item">
+      <p><strong>Q3:</strong> What are the rules of the event?</p>
+      <p><strong>A:</strong> The rules can be found in the FAQ section or in the event guidelines document. Be sure to review them before participating!</p>
+    </div>
+
+    <!-- FAQ 4 -->
+    <div class="faq-item">
+      <p><strong>Q4:</strong> Will food be provided at WECE Hacks 2025?</p>
+      <p><strong>A:</strong> Full meals, snacks, and drinks will be provided and FREE!</p>
+    </div>
   </div>
 
-  <div class="section" id="tools-resources">
+  <div class="tools-resources-section" id="tools-resources">
     <h2>Tools and Resources</h2>
-    <p>tools and resources to create your hackathon project</p>
-
+    <p>This section contains tools and resources you need to get started with your projects at WECE Hacks 2025.</p>
+    <p>From coding tools to hardware resources, everything you need will be available here!</p>
+    <p>Stay tuned for more information coming soon!</p>
   </div>
 
-  <!-- JavaScript for smooth scrolling -->
+  <!-- Countdown Timer -->
   <script>
     document.querySelectorAll('.scroll-link').forEach(link => {
       link.addEventListener('click', function(e) {
@@ -166,6 +343,30 @@
         targetSection.scrollIntoView({ behavior: 'smooth' });
       });
     });
+
+    // Countdown Timer Functionality
+    function updateCountdown() {
+      const countdownDate = new Date("Feb 21, 2025 00:00:00").getTime();
+      const now = new Date().getTime();
+      const timeLeft = countdownDate - now;
+
+      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+      document.getElementById("days").textContent = days;
+      document.getElementById("hours").textContent = hours;
+      document.getElementById("minutes").textContent = minutes;
+      document.getElementById("seconds").textContent = seconds;
+
+      if (timeLeft < 0) {
+        clearInterval(x);
+        document.getElementById("timer").textContent = "EXPIRED";
+      }
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
   </script>
 
 </body>
