@@ -125,6 +125,10 @@
       font-weight: bold;
       text-align: center;
     }
+    #sponsors {
+      text-align: center;
+      padding: 2rem 0;
+    }
 
     .sponsors-section {
       width: 80%;
@@ -158,6 +162,19 @@
       line-height: 1.6;
     }
 
+    .sponsor-images {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem; /* Spacing between images */
+      flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+    }
+
+.sponsor-images img {
+  max-width: 100px; /* Adjust size as needed */
+  height: auto;
+  display: block;
+}
     .faq-section {
       width: 60%;
       margin-top: 40px;
@@ -256,42 +273,35 @@
       <h2>Get Started</h2>
       <p>Welcome to WECE HACKS 2025!</p>
       <p>Here is where you will find everything you and your team will need to begin hacking!</p>
-      <p>*See FAQ below for any questions/concerns*</p>
       <p>
-        Create your team HERE *link coming soon*
+        First, you will need to register Individually 
       </p>
+<a href="https://forms.gle/WR3yeaWfeo54NknN6" target="_blank" style="text-decoration: none;">
+  <button style="padding: 10px 20px; background-color: #552cc5; color: white; border: none; border-radius: 5px; cursor: pointer;">
+    REGISTER FOR WECE HACKS 2025
+  </button>
+</a>
       <p>
-        Start CTF challenges HERE *link coming soon*
+        Next, when you're ready, fill out the team creation form. 
       </p>
+      <a href="https://forms.gle/p4FApZqUQTavLWj96" target="_blank" style="text-decoration: none;">
+        <button style="padding: 10px 20px; background-color: #552cc5; color: white; border: none; border-radius: 5px; cursor: pointer;">
+          CREATE YOUR TEAM
+        </button>
+      </a>
     </div>
   </div>
 
   <div class="sponsors-section" id="sponsors">
     <h2>Sponsors</h2>
-    <p>Our event is proudly supported by leading companies and organizations. Here’s a glimpse into our top platinum sponsors:</p>
+    <p>Our event is proudly supported by leading companies and organizations!</p>
     
     <!-- Sponsor 1 -->
-    <div class="sponsor">
+    <div class="sponsor-images">
       <img src="union_pacific.webp" alt="Union Pacific" />
-      <p>Union Pacific provides resources and innovation for the future of transportation. Their commitment helps WECE Hacks reach new heights.</p>
-    </div>
-    
-    <!-- Sponsor 2 -->
-    <div class="sponsor">
       <img src="collins_aerospace.png" alt="Collins Aerospace" />
-      <p>Collins Aerospace fosters cutting-edge engineering and supports future talent through sponsorship.</p>
-    </div>
-    
-    <!-- Sponsor 3 -->
-    <div class="sponsor">
       <img src="marvell.png" alt="Marvell" class="resized-image" />
-      <p>Marvell advances data infrastructure technology to connect the world. They play a vital role in empowering hackathons like ours.</p>
-    </div>
-    
-    <!-- Sponsor 4 -->
-    <div class="sponsor">
       <img src="natinstruments.png" alt="National Instruments" />
-      <p>National Instruments provides powerful solutions for measurement and automation. Their support enhances WECE Hacks immensely.</p>
     </div>
   </div>
 
@@ -329,7 +339,26 @@
   <div class="tools-resources-section" id="tools-resources">
     <h2>Tools and Resources</h2>
     <p>This section contains tools and resources you need to get started with your projects at WECE Hacks 2025.</p>
-    <p>From coding tools to hardware resources, everything you need will be available here!</p>
+    <a href="https://code.visualstudio.com/docs/getstarted/getting-started" target="_blank" style="text-decoration: none;">
+      <button style="padding: 10px 20px; background-color: #552cc5; color: white; border: none; border-radius: 5px; cursor: pointer;">
+       How to set up VS Code
+      </button>
+    </a>
+    <a href="https://www.freecodecamp.org/news/how-to-use-replit/" target="_blank" style="text-decoration: none;">
+      <button style="padding: 10px 20px; background-color: #552cc5; color: white; border: none; border-radius: 5px; cursor: pointer;">
+       A beginner's guide to Replit
+      </button>
+    </a>
+    <a href="https://docs.github.com/en/get-started/start-your-journey/hello-world" target="_blank" style="text-decoration: none;">
+      <button style="padding: 10px 20px; background-color: #552cc5; color: white; border: none; border-radius: 5px; cursor: pointer;">
+       Get started with Github 
+      </button>
+    </a>
+    <a href="https://stackoverflow.com/" target="_blank" style="text-decoration: none;">
+      <button style="padding: 10px 20px; background-color: #552cc5; color: white; border: none; border-radius: 5px; cursor: pointer;">
+       StackOverflow for QnA's
+      </button>
+    </a>
     <p>Stay tuned for more information coming soon!</p>
   </div>
 
