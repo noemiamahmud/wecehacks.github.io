@@ -6,7 +6,7 @@
   <title>Website Front Page</title>
   <style>
     body {
-      font-family: 'ArcadeClassic', sans-serif;
+      font-family: 'Courier New', Courier, monospace;
       margin: 0;
       padding: 0;
       display: flex;
@@ -19,34 +19,38 @@
       scroll-behavior: smooth;
     }
 
+    /* Styling the panel itself */
     .panel {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-around;
-      background-image: url('lofiarcade02.jpeg');
-      background-size: cover;
-      background-position: center;
-      padding: 10px;
-      border-radius: 0 0 8px 8px;
-      z-index: 1000;
+      top: 0; /* Aligns to the top of the viewport */
+      width: 100%; /* Full width */
+      display: flex; /* Align items in a row */
+      justify-content: space-around; /* Equal spacing between links */
+      padding: 10px; /* Space around links */
     }
 
+    /* Styling the links */
     .panel a {
-      background-color: #9f5efb;
-      color: white;
-      text-decoration: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      border-radius: 5px;
-      transition: background-color 0.3s;
+      color: white; /* White text */
+      text-decoration: none; /* Remove underline */
+      font-size: 16px; /* Adjust text size */
+      font-weight: bold; /* Optional: Bold text */
+      padding: 5px 10px; /* Add spacing inside the clickable area */
+      border-radius: 4px; /* Optional: Rounded edges */
+      transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
     }
 
+    /* Hover effect for links */
     .panel a:hover {
-      background-color: #0056b3;
+      background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
+      color: #f0f0f0; /* Optional: Slightly dim the text on hover */
     }
+
+    /* Add spacing between sections to prevent overlap */
+    .section {
+      padding-top: 80px; /* Matches or exceeds the panel height to prevent overlap */
+      margin-top: -80px; /* Counteracts padding to keep sections aligned */
+    }
+
 
     .content {
       width: 60%;
@@ -170,11 +174,11 @@
       flex-wrap: wrap; /* Ensures wrapping on smaller screens */
     }
 
-.sponsor-images img {
-  max-width: 100px; /* Adjust size as needed */
-  height: auto;
-  display: block;
-}
+    .sponsor-images img {
+      max-width: 100px; /* Adjust size as needed */
+      height: auto;
+      display: block;
+    }
     .faq-section {
       width: 60%;
       margin-top: 40px;
@@ -230,6 +234,11 @@
       line-height: 1.6;
     }
 
+    /* title of the main WECE hacks logo */
+    #title {
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
   </style>
 </head>
 <body>
@@ -242,16 +251,10 @@
     <a href="#faq" class="scroll-link">FAQ</a>
     <a href="#tools-resources" class="scroll-link">Tools and Resources</a>
   </div>
-  <div class="nav-bar">
-    <button onclick="scrollToSection('home')">Home</button>
-    <button onclick="scrollToSection('about')">About</button>
-    <button onclick="scrollToSection('sponsors')">Sponsors</button>
-    <button onclick="scrollToSection('faq')">FAQs</button>
-    <button onclick="scrollToSection('tools-resources')">Tools & Resources</button>
-  </div>
+  
   <!-- Main Content Area -->
   <div class="content" id="home">
-    <h1>WECE  HACKS  2025! </h1>
+    <h1 id="title">WECE  HACKS  2025</h1>
     <img src="WECELOGO.png" alt="Placeholder image for the website content" />
   </div>
 
